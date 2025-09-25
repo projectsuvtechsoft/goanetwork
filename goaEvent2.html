@@ -1,0 +1,1112 @@
+<html lang="en">
+  <head><script type="text/javascript" crossorigin="anonymous" async="" src="https://us-assets.i.posthog.com/static/array.js"></script>
+    <script src="https://static.readdy.ai/static/e.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goa Events - Premier Event Management System</title>
+<!-- <link rel="icon" type="image/png" href="TGN-LOGO.png"> -->
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+@keyframes wave {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.wave-divider {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 200%;
+height: 60px;
+background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'/%3E%3C/path%3E%3C/svg%3E");
+background-repeat: repeat-x;
+animation: wave 20s linear infinite;
+}
+.floating {
+animation: float 3s ease-in-out infinite;
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=vibrant%20tropical%20beach%20party%20in%20goa%20with%20neon%20lights%20and%20colorful%20decorations%2C%20palm%20trees%20silhouettes%2C%20modern%20festival%20setup%20with%20LED%20installations%2C%20dynamic%20atmosphere%20with%20light%20trails%2C%20professional%20event%20photography%20with%20artistic%20lighting&width=1920&height=1080&seq=hero-bg-002&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.gradient-mask {
+background: linear-gradient(45deg, rgba(0,180,216,0.2), rgba(255,159,104,0.2));
+}
+[data-aos] {
+opacity: 0;
+transition: all 0.8s ease;
+}
+[data-aos].aos-animate {
+opacity: 1;
+}
+.slide-active {
+opacity: 1;
+transform: translateX(0);
+}
+.slide-inactive {
+opacity: 0;
+transform: translateX(100%);
+}
+.nav-scrolled {
+background:rgb(92 138 143);
+backdrop-filter: blur(10px);
+box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+  background: linear-gradient(to right, #F5F5DC, #FAF0E6, #F7E7CE);
+}
+html.dark .contactsection, body.dark-mode .contactsection {
+   background: #0f172a;
+}
+  /* Hide scrollbar but allow scrolling */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .ri-calendar-event-line:before {
+    content: "\eb25";
+    color: rgb(255 159 104 );
+}
+.ri-map-pin-line:before {
+    content: "\ef14";
+    color: rgb(255 159 104 );
+}
+
+</style>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300" data-testim-main-word-scripts-loaded="true">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+<!-- <div class="absolute right-6 top-1/2 -translate-y-1/2 flex items-center space-x-4">
+<button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors">
+<i class="ri-sun-line dark:hidden" style="color: rgba(222, 184, 135, 1);"></i>
+<i class="ri-moon-line hidden dark:block" style="color: rgba(222, 184, 135, 1);"></i>
+</button>
+</div> -->
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between">
+<div class="font-['Pacifico'] text-2xl bg-gradient-to-r from-[#F5F5DC] via-[#FAF0E6] to-[#F7E7CE] bg-clip-text text-transparent" id="logo"><img src="TGN-LOGO.png" alt="GoaEvents Logo" style="width: 50px;height: fit-content;"></div>
+<div class="hidden lg:flex items-center space-x-8">
+<a href="#events" class="text-white hover:text-secondary transition-colors">Events</a>
+<a href="#membership" class="text-white hover:text-secondary transition-colors">Membership</a>
+<a href="#partners" class="text-white hover:text-secondary transition-colors">Partners</a>
+<a href="#footer" class="text-white hover:text-secondary transition-colors">About Us</a>
+<a href="#contact" class="text-white hover:text-secondary transition-colors">Contact Us</a>
+</div>
+<div class="flex items-center space-x-4">
+   <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors">
+   <i class="ri-sun-line dark:hidden text-secondary" ></i>
+<i class="ri-moon-line hidden dark:block text-secondary" ></i>
+  </button>
+<button class="hidden lg:block text-white px-6 py-2 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap bg-secondary" >
+Login
+</button>
+<button id="mobile-menu-btn" class="lg:hidden text-white">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</button>
+</div>
+
+
+</div>
+</div>
+<div id="mobile-menu" class="lg:hidden fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 z-40">
+<div class="p-6 bg-white">
+<div class="flex justify-between items-center mb-8">
+<div class="font-['Pacifico'] text-2xl bg-gradient-to-r from-[#F5F5DC] via-[#FAF0E6] to-[#F7E7CE] bg-clip-text text-transparent"><img src="/TGN-LOGO.png" alt="GoaEvents Logo" style="width: 50px;height: fit-content;"></div>
+<button id="mobile-menu-close" class="text-gray-600">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-close-line ri-lg"></i>
+</div>
+</button>
+</div>
+<div class="space-y-6">
+<a href="#events" class="block text-gray-800 hover:text-secondary transition-colors">Events</a>
+<a href="#membership" class="block text-gray-800 hover:text-secondary transition-colors">Membership</a>
+<a href="#partners" class="block text-gray-800 hover:text-secondary transition-colors">Partners</a>
+<a href="#footer" class="block text-gray-800 hover:text-secondary transition-colors">About Us</a>
+<a href="#contact" class="block text-gray-800 hover:text-secondary transition-colors">Contact Us</a>
+<button class="w-full text-white py-3 !rounded-button hover:bg-orange-600 bg-secondary transition-colors whitespace-nowrap">
+Login
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="hero-bg relative min-h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+<div class="wave-divider"></div>
+<div class="absolute inset-0 gradient-mask"></div>
+<div class="absolute right-10 top-1/4 floating">
+<i class="ri-palm-line text-white text-8xl opacity-20"></i>
+</div>
+<div class="absolute left-10 bottom-1/4 floating" style="animation-delay: -1.5s">
+<i class="ri-sailboat-line text-white text-6xl opacity-20"></i>
+</div>
+<div class="relative z-10 w-full">
+<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl">
+<h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+Experience Goa's Most Spectacular Events
+</h1>
+<p class="text-xl text-white/90 mb-8 leading-relaxed">
+From beachside celebrations to corporate gatherings, we create unforgettable moments in India's party capital. Discover, book, and celebrate with Goa's premier event management platform.
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class=" text-white px-8 py-4 !rounded-button hover:bg-blue-600 transition-all transform hover:scale-105 whitespace-nowrap bg-secondary hover:bg-orange-600" >
+Explore Events
+</button>
+<button class="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 !rounded-button hover:bg-white/30 transition-all whitespace-nowrap">
+Watch Demo
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gradient-to-r from-[#F5F5DC] via-[#FAF0E6] to-[#F7E7CE] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+  <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Milestones</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-lg">
+        Celebrating our journey and the trust of our vibrant community
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      
+      <!-- Card 1 -->
+      <div class="group">
+        <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-5xl font-bold text-primary dark:text-primary/80 mb-2 group-hover:scale-110 transition-transform">100K+</div>
+          <div class="text-gray-700 dark:text-gray-200 font-semibold text-lg">Events Listed</div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Discover amazing events happening across Goa</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group">
+        <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-5xl font-bold text-secondary dark:text-secondary/80 mb-2 group-hover:scale-110 transition-transform">500K+</div>
+          <div class="text-gray-700 dark:text-gray-200 font-semibold text-lg">Party Hunters</div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Join our vibrant community of event enthusiasts</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group">
+        <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-5xl font-bold text-palm dark:text-palm/80 mb-2 group-hover:scale-110 transition-transform">3K+</div>
+          <div class="text-gray-700 dark:text-gray-200 font-semibold text-lg">Venues Listed</div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Premium venues for every type of celebration</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-20 bg-gray-50 dark:bg-gray-800">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Today's Event Highlights</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg">Don't miss out on these amazing events happening today</p>
+</div>
+<div id="highlights-carousel" class="relative overflow-hidden rounded-2xl">
+<div class="flex transition-transform duration-500" id="carousel-container" style="transform: translateX(0%);">
+<div class="w-full flex-shrink-0 relative">
+<div class="h-96 bg-cover bg-center rounded-2xl" style="background-image: url('https://readdy.ai/api/search-image?query=elegant%20beach%20wedding%20ceremony%20in%20goa%20with%20white%20decorations%20and%20tropical%20flowers%2C%20sunset%20lighting%2C%20professional%20event%20photography%2C%20romantic%20atmosphere%20with%20ocean%20view&amp;width=1200&amp;height=400&amp;seq=highlight-001&amp;orientation=landscape')">
+<div class="absolute inset-0 bg-black/40 rounded-2xl flex items-end">
+<div class="p-8 text-white">
+<h3 class="text-2xl font-bold mb-2">Sunset Beach Wedding</h3>
+<p class="text-white/90 mb-4">Romantic beachside ceremony with stunning ocean views</p>
+  <div class="flex items-center space-x-6 mb-4 text-sm text-white/90">
+    <button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+View Details
+</button>
+                  <div class="flex items-center space-x-2">
+                    <i class="ri-calendar-event-line"></i>
+                    <span>24 Sep 2025, 6:00 PM</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <i class="ri-map-pin-line"></i>
+                    <span>Goa Beach</span>
+                  </div>
+                </div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="w-full flex-shrink-0 relative">
+<div class="h-96 bg-cover bg-center rounded-2xl" style="background-image: url('https://readdy.ai/api/search-image?query=vibrant%20corporate%20conference%20event%20in%20goa%20with%20modern%20stage%20setup%2C%20professional%20lighting%2C%20business%20networking%20atmosphere%2C%20tropical%20venue%20with%20palm%20trees&amp;width=1200&amp;height=400&amp;seq=highlight-002&amp;orientation=landscape')">
+<div class="absolute inset-0 bg-black/40 rounded-2xl flex items-end">
+<div class="p-8 text-white">
+<h3 class="text-2xl font-bold mb-2">Corporate Summit 2025</h3>
+<p class="text-white/90 mb-4">Premier business networking event with industry leaders</p>
+  <div class="flex items-center space-x-6 mb-4 text-sm text-white/90">
+    <button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+View Details
+</button>
+                  <div class="flex items-center space-x-2">
+                    <i class="ri-calendar-event-line"></i>
+                    <span>24 Sep 2025, 10:00 AM</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <i class="ri-map-pin-line"></i>
+                    <span>Goa Beach</span>
+                  </div>
+                </div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="w-full flex-shrink-0 relative">
+<div class="h-96 bg-cover bg-center rounded-2xl" style="background-image: url('https://readdy.ai/api/search-image?query=colorful%20beach%20party%20festival%20in%20goa%20with%20DJ%20stage%2C%20dancing%20crowd%2C%20neon%20lights%2C%20tropical%20party%20atmosphere%2C%20evening%20celebration%20with%20palm%20trees&amp;width=1200&amp;height=400&amp;seq=highlight-003&amp;orientation=landscape')">
+<div class="absolute inset-0 bg-black/40 rounded-2xl flex items-end">
+<div class="p-8 text-white">
+<h3 class="text-2xl font-bold mb-2">Tropical Music Festival</h3>
+<p class="text-white/90 mb-4">Dance the night away with world-class DJs and artists</p>
+  <div class="flex items-center space-x-6 mb-4 text-sm text-white/90">
+    <button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+View Details
+</button>
+                  <div class="flex items-center space-x-2">
+                    <i class="ri-calendar-event-line"></i>
+                    <span>24 Sep 2025, 8:00 PM</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <i class="ri-map-pin-line"></i>
+                    <span>Goa Beach</span>
+                  </div>
+                </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<button id="prev-slide" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-left-line"></i>
+</div>
+</button>
+<button id="next-slide" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+<button class="w-3 h-3 rounded-full carousel-dot active:bg-white bg-white" data-slide="0"></button>
+<button class="w-3 h-3 rounded-full carousel-dot bg-white/50" data-slide="1"></button>
+<button class="w-3 h-3 rounded-full carousel-dot bg-white/50" data-slide="2"></button>
+</div>
+</div>
+</div>
+</section>
+<section id=Partners class="py-20 bg-gradient-to-br from-[#F5F5DC]/20 via-[#FAF0E6]/20 to-[#F7E7CE]/20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Partners</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg">Trusted by leading brands and venues across Goa</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center">
+<div class="text-center">
+<i class="ri-hotel-line text-4xl text-primary mb-2"></i>
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Taj Hotels</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center">
+<div class="text-center">
+<i class="ri-restaurant-line text-4xl text-secondary mb-2"></i>
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Marriott</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center">
+<div class="text-center">
+<i class="ri-music-line text-4xl text-palm mb-2"></i>
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Club Cubana</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center">
+<div class="text-center">
+<i class="ri-sailboat-line text-4xl text-coral mb-2"></i>
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Yacht Club</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center">
+<div class="text-center">
+<i class="ri-camera-line text-4xl text-neon mb-2"></i>
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Photo Studios</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center">
+<div class="text-center">
+<i class="ri-cake-line text-4xl text-primary mb-2"></i>
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300">Catering Co</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="events" class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Services</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg">Comprehensive event solutions tailored for your needs</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+  <!-- Event Planning Card -->
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=elegant%20event%20planning%20setup%20with%20decorative%20elements%2C%20tropical%20flowers%2C%20wedding%20planning%20materials%2C%20professional%20event%20management%20tools%2C%20bright%20clean%20background&amp;width=400&amp;height=300&amp;seq=service-001&amp;orientation=landscape')"></div>
+    <div class="p-6">
+      <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+        <i class="ri-user-line text-primary ri-xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Individual Event</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">From birthdays to private parties, we handle every detail so you can enjoy stress-free celebrations.</p>
+      <button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-primary/80 transition-colors whitespace-nowrap">
+      View Details
+      </button>
+    </div>
+  </div>
+
+  <!-- Premium Membership Card -->
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=premium%20membership%20card%20design%20with%20tropical%20goa%20theme%2C%20exclusive%20benefits%20illustration%2C%20golden%20accents%2C%20luxury%20lifestyle%20elements%2C%20clean%20modern%20design&amp;width=400&amp;height=300&amp;seq=service-002&amp;orientation=landscape')"></div>
+    <div class="p-6">
+      <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+        <i class="ri-megaphone-line text-secondary ri-xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Brands Event</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">Creative brand activations, product launches, and promotional events designed to maximize impact and engagement.</p>
+      <button class="w-full bg-secondary text-white py-3 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+       View Details
+      </button>
+    </div>
+  </div>
+
+  <!-- Venue Management Card -->
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20venue%20management%20services%2C%20event%20venue%20setup%20with%20modern%20equipment%2C%20sound%20and%20lighting%20systems%2C%20tropical%20venue%20in%20goa%2C%20clean%20organized%20space&amp;width=400&amp;height=300&amp;seq=service-003&amp;orientation=landscape')"></div>
+    <div class="p-6">
+      <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+        <i class="ri-building-line text-green-600 ri-xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Business Event</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">Professional management of conferences, corporate gatherings, and networking events tailored to your objectives.</p>
+      <button class="w-full bg-green-600 text-white py-3 !rounded-button hover:bg-green-700 transition-colors whitespace-nowrap">
+       View Details
+      </button>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<section class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Event Showcases</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-lg">Watch our amazing events come to life</p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 w-full bg-cover bg-center rounded-t-2xl" style="background-image: url('EventShowcase-1.jpg')">
+          <div class="absolute inset-0  transition-all flex items-center justify-center">
+            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i class="ri-play-fill text-white ri-2x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-b-2xl">
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-1">Beach Wedding Highlights</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Romantic beachside ceremony</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 w-full bg-cover bg-center rounded-t-2xl" style="background-image: url('EventShowcase-3.png')">
+          <div class="absolute inset-0 transition-all flex items-center justify-center">
+            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i class="ri-play-fill text-white ri-2x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-b-2xl">
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-1">Corporate Summit</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Professional business event</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-64 w-full bg-cover bg-center rounded-t-2xl" style="background-image: url('EventShowcase-2.jpg')">
+          <div class="absolute inset-0  transition-all flex items-center justify-center">
+            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i class="ri-play-fill text-white ri-2x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-b-2xl">
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-1">Music Festival</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Energetic beach party</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="membership" class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Membership Plans</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg">Choose the perfect plan for your event needs</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="p-8">
+<div class="text-center mb-6">
+<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Basic</h3>
+<div class="text-4xl font-bold text-primary mb-2">₹999<span class="text-lg text-gray-500">/month</span></div>
+<p class="text-gray-600 dark:text-gray-300">Perfect for occasional event goers</p>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Access to 100+ events monthly
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Basic event recommendations
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Standard booking support
+</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">
+Choose Basic
+</button>
+</div>
+</div>
+<div class="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-secondary">
+<div class="p-8">
+<div class="text-center mb-6">
+<div class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">Most Popular</div>
+<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Premium</h3>
+<div class="text-4xl font-bold text-secondary mb-2">₹2,499<span class="text-lg text-gray-500">/month</span></div>
+<p class="text-gray-600 dark:text-gray-300">Best for regular party enthusiasts</p>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Unlimited event access
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Priority booking &amp; discounts
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Personal event concierge
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+VIP event invitations
+</li>
+</ul>
+<button class="w-full bg-secondary text-white py-3 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+Choose Premium
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="p-8">
+<div class="text-center mb-6">
+<h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">VIP</h3>
+<div class="text-4xl font-bold text-palm mb-2">₹4,999<span class="text-lg text-gray-500">/month</span></div>
+<p class="text-gray-600 dark:text-gray-300">Ultimate luxury experience</p>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+All Premium features
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Exclusive VIP-only events
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+Private venue access
+</li>
+<li class="flex items-center text-gray-600 dark:text-gray-300">
+<i class="ri-check-line text-green-500 mr-3"></i>
+24/7 premium support
+</li>
+</ul>
+<button class="w-full bg-palm text-white py-3 !rounded-button hover:bg-teal-600 transition-colors whitespace-nowrap">
+Choose VIP
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- <section class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Book Your Event</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg">Choose from our popular event categories</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-purple-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+<div class="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-r from-purple-600 via-secondary to-primary transform origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+<div class="p-8">
+<div class="relative">
+<div class="w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-12 transition-transform">
+<i class="ri-shopping-bag-line text-primary ri-2x"></i>
+</div>
+<div class="text-center">
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Shopping Events</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Exclusive shopping experiences and pop-up markets</p>
+<div class="flex items-center justify-center mb-6">
+<span class="text-xs text-gray-500 mr-2">Starting from</span>
+<span class="text-2xl font-bold text-primary">₹15,000</span>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary/80 text-white py-3 !rounded-button relative overflow-hidden group-hover:shadow-lg group-hover:shadow-primary/20 transition-all whitespace-nowrap">
+<span class="relative z-10">Book Now</span>
+<div class="absolute inset-0 bg-gradient-to-r from-secondary to-primary transform translate-y-full group-hover:translate-y-0 transition-transform"></div>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute top-4 right-4 w-24 h-24 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+</div>
+<div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-briefcase-line text-secondary ri-2x"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Business Events</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Corporate meetings, conferences, and seminars</p>
+<p class="text-secondary font-semibold mb-4">Starting ₹25,000</p>
+<button class="w-full bg-secondary text-white py-3 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+Book Now
+</button>
+</div>
+<div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-user-heart-line text-purple-600 ri-2x"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Private Parties</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Intimate celebrations and personal milestones</p>
+<p class="text-purple-600 font-semibold mb-4">Starting ₹20,000</p>
+<button class="w-full bg-purple-600 text-white py-3 !rounded-button hover:bg-purple-700 transition-colors whitespace-nowrap">
+Book Now
+</button>
+</div>
+<div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-restaurant-line text-green-600 ri-2x"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Food Events</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Culinary festivals and food tasting events</p>
+<p class="text-green-600 font-semibold mb-4">Starting ₹12,000</p>
+<button class="w-full bg-green-600 text-white py-3 !rounded-button hover:bg-green-700 transition-colors whitespace-nowrap">
+Book Now
+</button>
+</div>
+</div>
+</div>
+</section> -->
+<section class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        What Our Customers Say
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 text-lg">
+        Real experiences from our amazing community
+      </p>
+    </div>
+
+    <!-- Scrollable container -->
+    <div class="relative" id="testimonialContainer">
+      <div
+        class="flex overflow-x-auto gap-8 pb-4 no-scrollbar"
+        id="testimonialTrack"
+      >
+        <div class="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-cover bg-center rounded-full mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20headshot%20of%20happy%20young%20woman%20smiling%2C%20clean%20background%2C%20portrait%20photography%2C%20friendly%20expression&amp;width=100&amp;height=100&amp;seq=testimonial-001&amp;orientation=squarish')"></div> <div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Priya Sharma</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">Event Enthusiast</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-500 mb-4">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 italic">
+            "GoaEvents made my wedding planning so much easier! The team was incredibly professional and helped us create the perfect beachside ceremony. Highly recommended!"
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md">
+          <div class="flex items-center mb-6">
+           <div class="w-16 h-16 bg-cover bg-center rounded-full mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20headshot%20of%20confident%20businessman%20smiling%2C%20clean%20background%2C%20corporate%20portrait%2C%20friendly%20demeanor&amp;width=100&amp;height=100&amp;seq=testimonial-002&amp;orientation=squarish')"></div> <div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Rajesh Patel</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">Corporate Manager</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-500 mb-4">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 italic">
+            "Our corporate retreat was a huge success thanks to GoaEvents. They handled everything from venue selection to catering. The attention to detail was outstanding!"
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md">
+          <div class="flex items-center mb-6">
+           <div class="w-16 h-16 bg-cover bg-center rounded-full mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20headshot%20of%20cheerful%20young%20man%20with%20beard%20smiling%2C%20clean%20background%2C%20casual%20portrait%2C%20warm%20expression&amp;width=100&amp;height=100&amp;seq=testimonial-003&amp;orientation=squarish')"></div> <div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Arjun Menon</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">Party Organizer</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-500 mb-4">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 italic">
+            "The premium membership is worth every penny! I get access to exclusive events and the VIP treatment makes every party special. Love the community!"
+          </p>
+        </div>
+         <div class="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md">
+          <div class="flex items-center mb-6">
+           <div class="w-16 h-16 bg-cover bg-center rounded-full mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20blonde%20woman%20in%20business%20blazer%20smiling%20warmly%20with%20confident%20expression%20against%20clean%20white%20background&width=60&height=60&seq=testimonial4&orientation=squarish')"></div> <div>
+              <h4 class="font-semibold text-gray-800 dark:text-white">Sneha Kapoor</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">Entrepreneur</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-500 mb-4">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 italic">
+            "GoaEvents has been a game-changer for my business networking. Every event is perfectly organized, helping me connect with the right people effortlessly!"
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- <section class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Explore Goa</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg">Discover the beauty and culture of India's favorite destination</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="relative group overflow-hidden rounded-2xl">
+<div class="h-80 bg-cover bg-center transition-transform duration-300 group-hover:scale-110" style="background-image: url('https://readdy.ai/api/search-image?query=pristine%20goa%20beach%20with%20golden%20sand%2C%20clear%20blue%20water%2C%20palm%20trees%2C%20tropical%20paradise%2C%20sunset%20lighting%2C%20peaceful%20atmosphere&amp;width=400&amp;height=500&amp;seq=beach-001&amp;orientation=portrait')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-bold mb-2">Beautiful Beaches</h3>
+<p class="text-white/90">Pristine coastlines and crystal clear waters</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl">
+<div class="h-80 bg-cover bg-center transition-transform duration-300 group-hover:scale-110" style="background-image: url('https://readdy.ai/api/search-image?query=adventure%20activities%20in%20goa%20including%20water%20sports%2C%20parasailing%2C%20jet%20skiing%2C%20exciting%20outdoor%20adventures%2C%20tropical%20setting&amp;width=400&amp;height=500&amp;seq=adventure-001&amp;orientation=portrait')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-bold mb-2">Adventure Sports</h3>
+<p class="text-white/90">Thrilling water sports and outdoor activities</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl">
+<div class="h-80 bg-cover bg-center transition-transform duration-300 group-hover:scale-110" style="background-image: url('https://readdy.ai/api/search-image?query=traditional%20goan%20culture%20with%20local%20festivals%2C%20colorful%20celebrations%2C%20historic%20architecture%2C%20cultural%20heritage%2C%20vibrant%20community%20life&amp;width=400&amp;height=500&amp;seq=culture-001&amp;orientation=portrait')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-bold mb-2">Rich Culture</h3>
+<p class="text-white/90">Historic heritage and vibrant traditions</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> -->
+<section id="contact" class="py-20 contactsection  dark:bg-[#0f172a]">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Get In Touch</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-lg">Ready to plan your next amazing event? Let's talk!</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+      <form class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Full Name</label>
+          <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Enter your full name">
+        </div>
+        <div>
+          <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Email Address</label>
+          <input type="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Enter your email">
+        </div>
+        <div>
+          <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Phone Number</label>
+          <input type="tel" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Enter your phone number">
+        </div>
+        <div>
+          <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Event Type</label>
+          <div class="relative">
+            <button type="button" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-left bg-white flex items-center justify-between dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+              <span class="text-gray-500 dark:text-gray-300">Select event type</span>
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-arrow-down-s-line text-gray-400 dark:text-gray-300"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Message</label>
+          <textarea rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Tell us about your event requirements"></textarea>
+        </div>
+        <div class="md:col-span-2">
+          <button type="submit" class="w-full py-4 !rounded-button font-semibold whitespace-nowrap text-white bg-secondary hover:bg-orange-600  transition-colors">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="font-['Pacifico'] text-2xl bg-gradient-to-r from-[#F5F5DC] via-[#FAF0E6] to-[#F7E7CE] bg-clip-text text-transparent mb-4"><img src="/TGN-LOGO.png" alt="GoaEvents Logo" style="width: 50px;height: fit-content;"></div>
+<p class="text-gray-400 mb-6">Creating unforgettable experiences in India's party capital. Your premier destination for event management in Goa.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-line"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+<li><a href="#membership" class="text-gray-400 hover:text-white transition-colors">Membership</a></li>
+<li><a href="#partners" class="text-gray-400 hover:text-white transition-colors">Partners</a></li>
+<li><a href="#footer" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Event Planning</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Venue Management</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Corporate Events</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Private Parties</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+<div class="space-y-3">
+<div class="flex items-center text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Panaji, Goa 403001, India</span>
+</div>
+<div class="flex items-center text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-phone-line"></i>
+</div>
+<span>+91 98765 43210</span>
+</div>
+<div class="flex items-center text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-mail-line"></i>
+</div>
+<span>info@goaevents.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2025 GoaEvents. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script type="text/javascript" crossorigin="anonymous" src="https://us-assets.i.posthog.com/static/surveys.js?v=1.268.1"></script><script type="text/javascript" crossorigin="anonymous" src="https://us-assets.i.posthog.com/array/phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd/config.js"></script><script type="text/javascript" crossorigin="anonymous" src="https://us-assets.i.posthog.com/static/dead-clicks-autocapture.js?v=1.268.1"></script><script id="theme-toggle-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+function setTheme(isDark) {
+if (isDark) {
+html.classList.add('dark');
+localStorage.setItem('theme', 'dark');
+} else {
+html.classList.remove('dark');
+localStorage.setItem('theme', 'light');
+}
+}
+if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+setTheme(true);
+}
+themeToggle.addEventListener('click', () => {
+setTheme(!html.classList.contains('dark'));
+});
+});
+</script>
+<script id="navbar-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const navbar = document.getElementById('navbar');
+const logo = document.getElementById('logo');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+navbar.classList.add('nav-scrolled');
+logo.classList.remove('bg-gradient-to-r', 'from-[#F5F5DC]', 'via-[#FAF0E6]', 'to-[#F7E7CE]', 'bg-clip-text', 'text-transparent');
+logo.classList.add('text-primary');
+const navLinks = navbar.querySelectorAll('a');
+navLinks.forEach(link => {
+link.classList.remove('text-white');
+link.classList.add('text-gray-800');
+});
+} else {
+navbar.classList.remove('nav-scrolled');
+logo.classList.remove('text-primary');
+logo.classList.add('bg-gradient-to-r', 'from-[#F5F5DC]', 'via-[#FAF0E6]', 'to-[#F7E7CE]', 'bg-clip-text', 'text-transparent');
+const navLinks = navbar.querySelectorAll('a');
+navLinks.forEach(link => {
+link.classList.remove('text-gray-800');
+link.classList.add('text-white');
+});
+}
+});
+});
+</script>
+<script id="mobile-menu">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+mobileMenuClose.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+const mobileLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+});
+</script>
+<script id="carousel-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const carouselContainer = document.getElementById('carousel-container');
+const prevBtn = document.getElementById('prev-slide');
+const nextBtn = document.getElementById('next-slide');
+const dots = document.querySelectorAll('.carousel-dot');
+let currentSlide = 0;
+const totalSlides = 3;
+function updateCarousel() {
+const translateX = -currentSlide * 100;
+carouselContainer.style.transform = `translateX(${translateX}%)`;
+dots.forEach((dot, index) => {
+if (index === currentSlide) {
+dot.classList.remove('bg-white/50');
+dot.classList.add('bg-white');
+} else {
+dot.classList.remove('bg-white');
+dot.classList.add('bg-white/50');
+}
+});
+}
+function nextSlide() {
+currentSlide = (currentSlide + 1) % totalSlides;
+updateCarousel();
+}
+function prevSlide() {
+currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+updateCarousel();
+}
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+dots.forEach((dot, index) => {
+dot.addEventListener('click', function() {
+currentSlide = index;
+updateCarousel();
+});
+});
+setInterval(nextSlide, 5000);
+updateCarousel();
+});
+</script>
+<script id="smooth-scrolling">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+if (targetSection) {
+const offsetTop = targetSection.offsetTop - 80;
+window.scrollTo({
+top: offsetTop,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '-A1psJkFOGAqj_0pcy_57Q';
+    window.host = 'readdy.ai';
+</script>
+<!-- Optional JS for smooth continuous scroll -->
+<script>
+  const track = document.getElementById('testimonialTrack');
+  let scrollSpeed = 0.5; // smooth pixels per frame
+  let isPaused = false;
+
+  // clone content for seamless loop
+  track.innerHTML += track.innerHTML;
+
+  function autoScroll() {
+    if (!isPaused) {
+      track.scrollLeft += scrollSpeed;
+      if (track.scrollLeft >= track.scrollWidth / 2) {
+        track.scrollLeft = 0; // seamless reset
+      }
+    }
+    requestAnimationFrame(autoScroll);
+  }
+
+  // pause on hover
+  track.addEventListener("mouseenter", () => isPaused = true);
+  track.addEventListener("mouseleave", () => isPaused = false);
+
+  autoScroll();
+</script>
+<script>
+tailwind.config = {
+darkMode: 'class',
+theme: {
+extend: {
+colors: {
+primary: '#00B4D8',
+secondary: '#FF9F68',
+aqua: '#90E0EF',
+sand: '#FFE5B9',
+coral: '#FF6B6B',
+palm: '#2EC4B6',
+neon: '#F72585'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<script>
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight - 80) { 
+      // After banner height
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+  });
+</script>
+<!-- <script src="https://static.readdy.ai/static/share.js"></script> -->
+</body></html>
